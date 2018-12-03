@@ -10,7 +10,15 @@ docker-compose up
 docker-compose up -d
 ```
 
-## about shadowsocks
+## Defualt Configuration
+
+```
+端口：8989
+密码：ss123456
+加密方法：aes-256-cfb
+```
+
+## About shadowsocks
 
 [wiki](https://github.com/shadowsocks/shadowsocks/wiki)
 

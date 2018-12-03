@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: viacooky/shadowsocks
+    volumes:
+      - ./logs:/shadowsocks/logs
+    ports:
+      - 8989:8989

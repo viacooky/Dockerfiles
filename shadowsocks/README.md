@@ -12,6 +12,6 @@ docker-compose up -d
 
 ## about shadowsocks
 
-![wiki](https://github.com/shadowsocks/shadowsocks/wiki)
+[wiki](https://github.com/shadowsocks/shadowsocks/wiki)
 
-![config file](https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File)
+[config file](https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File)

@@ -7,4 +7,4 @@ services:
       - ./proxy-config:/data
     ports:
       - 20443:443
-      - 28888:8888
+      - 22398:2398

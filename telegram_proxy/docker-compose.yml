@@ -6,4 +6,4 @@ services:
     volumes:
       - ./proxy-config:/data
     ports:
-      - 10443:443
+      - 20443:443

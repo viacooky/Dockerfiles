@@ -1,0 +1,26 @@
+FROM alpine
+
+WORKDIR /downloads
+COPY ./get_info.py .
+RUN apk --update --no-cache add python3 curl \
+    && if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi \
+    && tag_name=`python get_info.py` \
+    && echo frp最新版本:${tag_name} \
+    && curl -sSLO https://github.com/fatedier/frp/releases/download/v${tag_name}/frp_${tag_name}_linux_amd64.tar.gz \
+    && echo 下载完成 \
+    && tar -zxvf frp_${tag_name}_linux_amd64.tar.gz \
+    && echo 解压完成 \
+    && mkdir -p /app \
+    && mv frp_${tag_name}_linux_amd64/frps /app \
+    && echo 开始清理 \
+    && rm -rf frp_${tag_name}_linux_amd64.tar.gz frp_${tag_name}_linux_amd64 \
+    && apk del python3 curl \
+    && rm -rf /var/cache/apk/* \
+    && rm -rf /lib/apk \
+    && rm -rf /etc/apk \
+    && echo 清理完成
+
+
+WORKDIR /app
+COPY ./frps.ini .
+CMD [ "./frps", "-c", "frps.ini" ]

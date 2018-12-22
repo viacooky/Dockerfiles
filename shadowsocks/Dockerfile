@@ -3,13 +3,14 @@ LABEL description="Shadowsocks 镜像" \
     version="1.0" \
     maintainer="viacooky@gmail.com"
 
+EXPOSE 8989
 WORKDIR /app
+COPY ./config.json .
 RUN apk add --no-cache --update python curl \
     && curl -sSL -o "/tmp/get-pip.py" "https://bootstrap.pypa.io/get-pip.py" \
     && python "/tmp/get-pip.py" \
     && pip install --upgrade pip \
     && pip install --no-cache-dir shadowsocks \
-    && curl -sSLO https://github.com/viacooky/Dockerfiles/raw/master/shadowsocks/config.json \
     && echo 开始清理 \
     && apk del curl \
     && rm -rf /etc/apk \
@@ -28,5 +29,5 @@ RUN apk add --no-cache --update python curl \
     && rm -rf /usr/bin/pydoc \
     && echo 清理完成
 
-EXPOSE 8989
-CMD [ "/usr/bin/ssserver", "-c", "/app/config.json"]
+
+CMD [ "/usr/bin/ssserver", "-c", "config.json"]

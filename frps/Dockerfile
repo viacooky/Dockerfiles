@@ -10,7 +10,8 @@ RUN apk --update --no-cache add python3 curl \
     && echo 下载完成 \
     && tar -zxvf frp_${tag_name}_linux_amd64.tar.gz \
     && echo 解压完成 \
-    && mv frp_${tag_name}_linux_amd64/frps \
+    && mkdir -p /app \
+    && mv frp_${tag_name}_linux_amd64/frps /app\
     && echo 开始清理 \
     && apk del curl \
     && rm -rf /etc/apk \

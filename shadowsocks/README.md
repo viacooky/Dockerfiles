@@ -1,16 +1,25 @@
 # Shadowsocks docker images
 
-## Guides
+## What is this?
 
-```bash
-docker-compose up
-```
+[Shadowsocks](https://github.com/shadowsocks/shadowsocks) docker version
 
-```bash
-docker-compose up -d
-```
+## 镜像使用
 
-## Defualt Configuration
+### 直接使用
+
+- 默认启用端口：
+  - 8989
+
+`docker run --rm -p <your port>:8989 viacooky/shadowsocks`
+
+### 自定义配置文件
+
+`docker run --rm -v <your file>:/app/config.json -p <your port>:8989 viacooky/frps`
+
+## 配置
+
+### 默认配置
 
 ```
 端口：8989
@@ -18,8 +27,12 @@ docker-compose up -d
 加密方法：aes-256-cfb
 ```
 
-## About shadowsocks
+默认 config.json
 
-[wiki](https://github.com/shadowsocks/shadowsocks/wiki)
+`https://github.com/viacooky/Dockerfiles/raw/master/shadowsocks/config.json`
 
-[config file](https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File)
+## 关于 shadowsocks
+
+[shadowsocks wiki](https://github.com/shadowsocks/shadowsocks/wiki)
+
+[shadowsocks Configuration](https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File)

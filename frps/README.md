@@ -2,7 +2,7 @@
 
 ## What is this?
 
-将[**FRP**](https://github.com/fatedier/frp)项目的服务端打包为 Docker 镜像，方便部署
+将[FRP](https://github.com/fatedier/frp)项目的服务端打包为 Docker 镜像，方便部署
 
 ## 镜像使用
 

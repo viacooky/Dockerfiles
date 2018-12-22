@@ -1,9 +1,10 @@
 FROM alpine
 
 WORKDIR /downloads
-COPY ./get_info.py .
+# COPY ./get_info.py .
 RUN apk --update --no-cache add python3 curl \
     && if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi \
+    && curl -sSLO https://raw.githubusercontent.com/viacooky/Dockerfiles/master/frps/get_info.py \
     && tag_name=`python get_info.py` \
     && echo frp最新版本:${tag_name} \
     && curl -sSLO https://github.com/fatedier/frp/releases/download/v${tag_name}/frp_${tag_name}_linux_amd64.tar.gz \

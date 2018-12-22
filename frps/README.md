@@ -2,7 +2,9 @@
 
 ## What is this?
 
-将[FRP](https://github.com/fatedier/frp)项目的服务端打包为 Docker 镜像，方便部署
+[FRP](https://github.com/fatedier/frp) server docker version
+
+[Github Repository](https://github.com/viacooky/Dockerfiles/tree/master/frps)
 
 ## 镜像使用
 
@@ -22,4 +24,8 @@
 
 `Dockerfile`默认拉取最新版本的 FRP，若 Dockerhub 官方仓库中镜像的 FRP 版本更新不及时，可 clone 本仓库后自行构建
 
-`docker build . -t <image name>:<tag>`
+```bash
+git clone https://github.com/viacooky/Dockerfiles.git
+cd Dockerfiles/frps
+docker build . -t <image name>:<tag>
+```

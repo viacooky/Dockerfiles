@@ -12,8 +12,9 @@ RUN apk --update --no-cache add python3 curl \
     && tar -zxvf frp_${tag_name}_linux_amd64.tar.gz \
     && echo 解压完成 \
     && mkdir -p /app \
-    && curl -sSL -o /app/frps.ini https://github.com/viacooky/Dockerfiles/raw/master/frps/frps.ini \
-    && mv frp_${tag_name}_linux_amd64/frps /app \
+    && curl -sSLO https://github.com/viacooky/Dockerfiles/raw/master/frps/frps.ini \
+    && mv frp_${tag_name}_linux_amd64/frps \
+    && mv frps.ini /app \
     && echo 开始清理 \
     && apk del python3 curl \
     && rm -rf /downloads \
@@ -26,5 +27,4 @@ RUN apk --update --no-cache add python3 curl \
 
 
 WORKDIR /app
-COPY ./frps.ini .
 CMD [ "./frps", "-c", "frps.ini" ]

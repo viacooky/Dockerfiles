@@ -20,6 +20,7 @@ RUN apk --update --no-cache add python3 curl \
     && rm -rf /sbin/apk \
     && rm -rf /share/apk \
     && rm -rf /var/cache \
+    && rm -rf /downloads \
     && echo 清理完成
 
 

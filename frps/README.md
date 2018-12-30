@@ -14,7 +14,9 @@
   - 7000 (Frps server)
   - 7500 (Dashboard）
 
-`docker run --rm -p <your port>:7000 -p <your port>:7500 viacooky/frps`
+`docker run --rm -p <your port>:7000 -p <your port>:7500 -p 20000-30000:20000-30000 viacooky/frps`
+
+- 可以使用 `docker run -p 20000-30000` 命令，发布 20000-30000 端口到宿主机，供 frpc 客户端发布远程端口
 
 ### 自定义配置文件
 

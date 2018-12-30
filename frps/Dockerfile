@@ -23,7 +23,7 @@ RUN apk --update --no-cache add python3 curl \
     && rm -rf /downloads \
     && echo 清理完成
 
-
+EXPOSE 20000-30000
 WORKDIR /app
 COPY ./frps.ini .
 CMD [ "./frps", "-c", "frps.ini" ]

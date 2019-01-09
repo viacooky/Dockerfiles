@@ -4,7 +4,13 @@
 
 [FRP](https://github.com/fatedier/frp) server docker version
 
+## Dockerfile
+
 [Github Repository](https://github.com/viacooky/Dockerfiles/tree/master/frps)
+
+## Try
+
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/viacooky/Dockerfiles/master/frps/pwd-stack.yml)
 
 ## 镜像使用
 

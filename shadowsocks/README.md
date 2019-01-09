@@ -1,5 +1,7 @@
 # Shadowsocks docker images
 
+![](https://img.shields.io/docker/automated/viacooky/shadowsocks.svg?style=flat-square) ![](https://img.shields.io/docker/build/viacooky/shadowsocks.svg?style=flat-square) ![](https://img.shields.io/microbadger/image-size/viacooky/shadowsocks.svg?style=flat-square)
+
 ## What is this?
 
 [Shadowsocks](https://github.com/shadowsocks/shadowsocks) docker version

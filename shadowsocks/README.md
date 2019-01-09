@@ -14,34 +14,49 @@
 
 [![Try in PWD](https://github.com/play-with-docker/stacks/raw/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/viacooky/Dockerfiles/master/shadowsocks/pwd-stack.yml)
 
-## 镜像使用
+## Usage
 
-### 直接使用
+### Simple
 
-- 默认启用端口：
-  - 8989
+Defrult expose ports：
+
+- 8989
 
 `docker run --rm -p <your port>:8989 viacooky/shadowsocks`
 
-### 自定义配置文件
+### Custom configuration file
 
 `docker run --rm -v <your file>:/app/config.json -p <your port>:8989 viacooky/shadowsocks`
 
-## 配置
+## Configuration
 
-### 默认配置
+### Default
 
 ```
-端口：8989
-密码：ss123456
-加密方法：aes-256-cfb
+port: 8989
+password: ss123456
+encryption method: aes-256-cfb
 ```
 
-默认 config.json
+default config.json
 
 `https://github.com/viacooky/Dockerfiles/blob/master/shadowsocks/config.json`
 
-## 关于 shadowsocks
+```JSON
+{
+  "server": "0.0.0.0",
+  "server_port": 8989,
+  "local_address": "0.0.0.0",
+  "local_port": 1080,
+  "password": "ss123456",
+  "timeout": 600,
+  "method": "aes-256-cfb",
+  "verbose ": "-3",
+  "log-file": "/shadowsocks/logs"
+}
+```
+
+## About shadowsocks project
 
 [shadowsocks wiki](https://github.com/shadowsocks/shadowsocks/wiki)
 

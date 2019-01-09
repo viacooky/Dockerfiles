@@ -7,3 +7,4 @@ services:
       - ./logs:/shadowsocks/logs
     ports:
       - 8989:8989
+    restart: always

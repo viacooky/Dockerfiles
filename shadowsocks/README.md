@@ -1,6 +1,6 @@
 # Shadowsocks docker images
 
-![](https://img.shields.io/docker/automated/viacooky/shadowsocks.svg?style=flat-square) ![](https://img.shields.io/docker/build/viacooky/shadowsocks.svg?style=flat-square) ![](https://img.shields.io/microbadger/image-size/viacooky/shadowsocks.svg?style=flat-square)
+![](https://img.shields.io/docker/automated/viacooky/shadowsocks.svg) ![](https://img.shields.io/docker/build/viacooky/shadowsocks.svg) ![](https://img.shields.io/microbadger/image-size/viacooky/shadowsocks.svg) ![](https://images.microbadger.com/badges/version/viacooky/shadowsocks.svg)
 
 ## What is this?
 

@@ -1,6 +1,6 @@
 # FRPS docker images
 
-![](https://img.shields.io/docker/automated/viacooky/frps.svg?style=flat-square) ![](https://img.shields.io/docker/build/viacooky/frps.svg?style=flat-square) ![](https://img.shields.io/microbadger/image-size/viacooky/frps.svg?style=flat-square)
+![](https://img.shields.io/docker/automated/viacooky/frps.svg) ![](https://img.shields.io/docker/build/viacooky/frps.svg) ![](https://img.shields.io/microbadger/image-size/viacooky/frps.svg) ![](https://images.microbadger.com/badges/version/viacooky/frps.svg)
 
 ## What is this?
 

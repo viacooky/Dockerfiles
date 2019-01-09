@@ -1,7 +1,11 @@
 FROM alpine
-LABEL description="Shadowsocks 镜像" \
-    version="1.0" \
-    maintainer="viacooky@gmail.com"
+
+# 名称/描述/源代码/使用/作者
+LABEL org.label-schema.name="shadowsocks" \
+    org.label-schema.description="shadowsocks docker version" \
+    org.label-schema.vendor="viacooky" \
+    org.label-schema.vcs-url="https://github.com/viacooky/Dockerfiles/tree/master/shadowsocks" \
+    org.label-schema.usage="https://github.com/viacooky/Dockerfiles/blob/master/shadowsocks/README.md"
 
 EXPOSE 8989
 WORKDIR /app

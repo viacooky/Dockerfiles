@@ -1,5 +1,14 @@
 FROM alpine
 
+# 名称/描述/源代码/使用/作者
+LABEL org.label-schema.name="frps" \
+    org.label-schema.description="frp server" \
+    org.label-schema.vendor="viacooky" \
+    org.label-schema.vcs-url="https://github.com/viacooky/Dockerfiles/tree/master/frps" \
+    org.label-schema.usage="https://github.com/viacooky/Dockerfiles/blob/master/frps/README.md"
+
+
+
 WORKDIR /downloads
 COPY ./get_info.py .
 RUN apk --update --no-cache add python3 curl \

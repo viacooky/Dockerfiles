@@ -4,6 +4,12 @@
 
 [Shadowsocks](https://github.com/shadowsocks/shadowsocks) docker version
 
+## Try
+
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/viacooky/Dockerfiles/master/shadowsocks/pwd-stack.yml)
+
+## Dockerfile
+
 [Github Repository](https://github.com/viacooky/Dockerfiles/tree/master/shadowsocks)
 
 ## 镜像使用

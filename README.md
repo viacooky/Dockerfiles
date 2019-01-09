@@ -10,7 +10,7 @@ shadowsocks docker version
 
 `docker pull viacooky/shadowsocks`
 
-[more...](https://github.com/viacooky/Dockerfiles/tree/master/shadowsocks)
+[more](https://github.com/viacooky/Dockerfiles/tree/master/shadowsocks)
 
 ## frp
 
@@ -18,4 +18,4 @@ frp server docker version
 
 `docker pull viacooky/frps`
 
-[more...](https://github.com/viacooky/Dockerfiles/tree/master/frps)
+[more](https://github.com/viacooky/Dockerfiles/tree/master/frps)

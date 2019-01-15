@@ -1,4 +1,4 @@
-# Shadowsocks docker image
+# Shadowsocks docker version
 
 ![](https://img.shields.io/docker/automated/viacooky/shadowsocks.svg) ![](https://img.shields.io/docker/build/viacooky/shadowsocks.svg) ![](https://img.shields.io/microbadger/image-size/viacooky/shadowsocks.svg) ![](https://images.microbadger.com/badges/version/viacooky/shadowsocks.svg)
 

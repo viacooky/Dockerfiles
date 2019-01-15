@@ -8,4 +8,4 @@ services:
     ports:
       - 7000:7000
       - 7500:7500
-    restart:
+    restart: always

@@ -6,7 +6,7 @@
 
 [FRP](https://github.com/fatedier/frp) server docker version
 
-update to **v0.23.0**
+update to **v0.22.0**
 
 ## Dockerfile
 
@@ -25,20 +25,15 @@ Default expose port:
 - 7000 (Frps server)
 - 7500 (Dashboard）
 
+Dashboard default:
+
+- username: admin
+- password: admin
+
 `docker run --rm -p <your port>:7000 -p <your port>:7500 -p 20000-30000:20000-30000 viacooky/frps`
 
-- 可以使用 `docker run -p 20000-30000` 命令，发布 20000-30000 端口到宿主机，供 frpc 客户端发布远程端口
+- you can use command `docker run -p 20000-30000` , publish ports 20000-30000 to hosted
 
 ### Custom configuration file
 
 `docker run --rm -v <your file>:/app/frps.ini -p <your port>:7000 -p <your port>:7500 viacooky/frps`
-
-### Update FRPS
-
-`Dockerfile`默认拉取最新版本的 FRP，若 Dockerhub 官方仓库中镜像的 FRP 版本更新不及时，可 clone 本仓库后自行构建
-
-```bash
-git clone https://github.com/viacooky/Dockerfiles.git
-cd Dockerfiles/frps
-docker build . -t <image name>:<tag>
-```

@@ -24,16 +24,18 @@ Default expose port:
 
 - 7000 (Frps server)
 - 7500 (Dashboard）
+- 20000-30000 (frpc use)
 
 Dashboard default:
 
 - username: admin
 - password: admin
 
-`docker run --rm -p <your port>:7000 -p <your port>:7500 -p 20000-30000:20000-30000 viacooky/frps`
+`docker run -d -p <your port>:7000 -p <your port>:7500 -p 20000-30000:20000-30000 viacooky/frps`
 
-- you can use command `docker run -p 20000-30000` , publish ports 20000-30000 to hosted
+- you can use command `docker run -p 20000-30000` , publish ports 20000-30000 to hosted,
+- actually i just use 20000-20100, because if i use 20000-30000 , my docker will be block
 
 ### Custom configuration file
 
-`docker run --rm -v <your file>:/app/frps.ini -p <your port>:7000 -p <your port>:7500 viacooky/frps`
+`docker run -d -v <your file>:/frps.ini -p <your port>:7000 -p <your port>:7500 viacooky/frps`

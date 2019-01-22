@@ -12,7 +12,7 @@ shadowsocks docker version
 
 [more](https://github.com/viacooky/Dockerfiles/tree/master/shadowsocks)
 
-## frp
+## frps
 
 frp server docker version
 

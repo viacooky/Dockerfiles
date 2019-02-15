@@ -6,7 +6,7 @@
 
 [FRP](https://github.com/fatedier/frp) server docker version
 
-update to **v0.23.1**
+update to **v0.24.1**
 
 ## Dockerfile
 

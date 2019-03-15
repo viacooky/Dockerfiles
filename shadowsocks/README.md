@@ -26,7 +26,7 @@ Defrult expose ports：
 
 ### Custom configuration file
 
-`docker run --rm -v <your file>:/app/config.json -p <your port>:8989 viacooky/shadowsocks`
+`docker run -d -v <your file>:/app/config.json -p <your port>:8989 viacooky/shadowsocks`
 
 ## Configuration
 

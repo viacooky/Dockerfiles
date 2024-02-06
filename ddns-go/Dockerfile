@@ -4,7 +4,7 @@ LABEL description="ddns-go" \
     github="https://github.com/viacooky/Dockerfiles" \
     original_repository="https://github.com/jeessy2/ddns-go"
 
-ENV VERSION __VERSION__
+ENV VERSION 6.1.1
 ENV TZ Asia/Shanghai
 
 ENV PLATFORM x86_64

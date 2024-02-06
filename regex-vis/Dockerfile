@@ -13,8 +13,7 @@ LABEL description="regex-vis" \
     github="https://github.com/viacooky/Dockerfiles" \
     original_repository="https://github.com/Bowen7/regex-vis"
 
-
-ENV VERSION 0.0.0
+ENV VERSION 0.0.1
 ENV TZ Asia/Shanghai
 ENV PLATFORM amd64
 ENV OS linux

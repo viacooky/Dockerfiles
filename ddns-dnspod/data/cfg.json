@@ -1,0 +1,8 @@
+{
+    "dnspod_id": "XXXXXXXXXXXXX",
+    "dnspod_token": "XXXXXXXXXXXXXXXXXXXXXXX",
+    "domain": "example.net",
+    "sub_domain": "example",
+    "internal": 30,
+    "email": "example@example.com"
+}

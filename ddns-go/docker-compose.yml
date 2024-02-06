@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  ddns-go:
+    image: viacooky/ddns-go
+    volumes:
+      - ${PWD}/data:/root
+    restart: always
+    network_mode: host
+    # ports:
+    #   - 9876:9876

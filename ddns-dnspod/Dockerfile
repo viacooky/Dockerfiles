@@ -1,0 +1,19 @@
+FROM python:3.12-alpine
+LABEL description="DDNS - DNSPOD" \
+    author="viacooky" \
+    github="https://github.com/viacooky/Dockerfiles"
+
+ENV VERSION 0.0.1
+ENV TZ Asia/Shanghai
+
+
+RUN if [ "$(uname -m)" = "x86_64" ]; then export PLATFORM=amd64 ; else if [ "$(uname -m)" = "aarch64" ]; then export PLATFORM=arm64 ; fi fi \
+    && echo ============== 当前架构${PLATFORM} \
+    && ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime \
+    && echo ${TZ} > /etc/timezone \
+    && pip3 install --no-cache-dir requests \
+    && mkdir -p /app 
+
+COPY data/app.py data/cfg.json /app/
+
+CMD [ "python3", "/app/app.py", "-c","/app/cfg.json" ]

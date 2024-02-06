@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  ddns-dnspod:
+    image: viacooky/ddns-dnspod
+    volumes:
+      - ${PWD}/data/cfg.json:/app/cfg.json
+    restart: unless-stopped

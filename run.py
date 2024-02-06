@@ -275,5 +275,5 @@ if __name__ == '__main__':
         # frps()
         # ddns_dnspod()
         # caddy_cloudflare()
-        ddns_go()
+        # ddns_go()
         pass

@@ -229,7 +229,28 @@ def ddns_go() -> None:
         logging.info(f'[{repo}] {OWNER}/{repo}:{latest_ver} 已存在，无需更新')
         return
 
-    new_text = Tools.read_file(docker_file_tmpl).replace('__CADDY_VER__', latest_ver)
+    new_text = Tools.read_file(docker_file_tmpl).replace('__VERSION__', latest_ver)
+    Tools.write_file(docker_file, new_text)
+    logging.info(f'[{repo}] Dockerfile 更新完成 {docker_file}')
+
+    DockerBuildX.build(repo, tag=latest_ver, cwd=repo_dir)
+    DockerBuildX.build(repo, tag='latest', cwd=repo_dir)
+
+
+def regex_vis() -> None:
+    """regex-vis 检查更新并构建镜像
+    """
+    repo = 'regex-vis'
+    repo_dir = WORKDIR.joinpath(repo)
+    docker_file = repo_dir.joinpath('Dockerfile')
+    docker_file_tmpl = repo_dir.joinpath('data', 'Dockerfile.tmpl')
+
+    latest_ver = '0.0.1'
+
+    if DockerHub.check_repository_tag(repo, latest_ver):
+        logging.info(f'[{repo}] {OWNER}/{repo}:{latest_ver} 已存在，无需更新')
+        return
+    new_text = Tools.read_file(docker_file_tmpl).replace('__VERSION__', latest_ver)
     Tools.write_file(docker_file, new_text)
     logging.info(f'[{repo}] Dockerfile 更新完成 {docker_file}')
 
@@ -245,6 +266,8 @@ if __name__ == '__main__':
             DockerHub.login()
             frps()
             ddns_go()
+            # ddns_dnspod()
+            regex_vis()
             caddy_cloudflare()
         finally:
             DockerHub.logout()

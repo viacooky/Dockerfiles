@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  regex-vis:
+    image: viacooky/regex-vis
+    restart: always
+    ports:
+      - 80:80

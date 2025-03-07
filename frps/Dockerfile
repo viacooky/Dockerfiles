@@ -4,7 +4,7 @@ LABEL description="frp Server" \
     github="https://github.com/viacooky/Dockerfiles" \
     original_repository="https://github.com/fatedier/frp"
 
-ENV FRP_VER 0.61.1
+ENV FRP_VER 0.61.2
 
 ENV TZ Asia/Shanghai
 ENV PLATFORM amd64

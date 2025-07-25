@@ -1,0 +1,23 @@
+name: pgsql
+
+services:
+  postgres:
+    container_name: postgres
+    image: "postgres:17.5-alpine"
+    restart: always
+    # network_mode: host
+    # networks:
+    #   - postgres
+    ports:
+      - "5432:5432"
+    # command: ["-c", "config_file=/var/lib/postgresql/data/postgresql.conf"] # 使用指定配置文件
+    volumes:
+      # - ${PWD}/postgresql.conf:/var/lib/postgresql/data/postgresql.conf    # 配置文件指定，配合 commands
+      - "${PWD}/data:/var/lib/postgresql/data"
+    environment:
+      TZ: "Asia/Shanghai"
+      LANG: "en_US.UTF-8"
+      PGDATA: "/var/lib/postgresql/data"  # 容器启动后，默认配置文件都在 PGDATA 里 包括 postgresql.conf pg_hba.conf
+      POSTGRES_USER: "postgres"           # 初始化用户名
+      POSTGRES_PASSWORD: "XXXXXXXXX"      # 初始化密码
+      POSTGRES_DB: "postgres"             # 初始化创建的数据库

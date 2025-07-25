@@ -1,0 +1,18 @@
+name: caddy
+
+services:
+  caddy-cloudflare:
+    container_name: caddy
+    image: "viacooky/caddy-cloudflare:latest"
+    restart: always
+    network_mode: host
+    # ports:
+      # - 80:80
+      # - 443:443
+      # - 2019:2019
+    volumes:
+      - ${PWD}/data/caddy_data:/data
+      - ${PWD}/data/caddy_config:/config
+      - ${PWD}/Caddyfile:/etc/caddy/Caddyfile
+    environment:
+      - CF_API_TOKEN=<CF_API_TOKEN> # 按需填自己的 token

@@ -1,0 +1,21 @@
+# ==================================================
+# 镜像: viacooky/postgres
+# 
+# 描述: PostgreSQL
+# ==================================================
+#
+# 官网: https://www.postgresql.org
+# 文档: https://www.postgresql.org/docs
+# 仓库: https://git.postgresql.org
+#       https://github.com/postgres/postgres
+#
+# ==================================================
+#
+
+FROM postgres:__PG_VER__-alpine
+LABEL description="postgres __PG_VER__-alpine" \
+    author="viacooky" \
+    github="https://github.com/viacooky/Dockerfiles/postgres"
+
+EXPOSE 5432
+CMD ["postgres"]

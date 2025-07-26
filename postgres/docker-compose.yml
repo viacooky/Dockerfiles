@@ -3,7 +3,7 @@ name: pgsql
 services:
   postgres:
     container_name: postgres
-    image: "postgres:17.5-alpine"
+    image: "viacooky/postgres:17.5-alpine"
     restart: always
     # network_mode: host
     # networks:

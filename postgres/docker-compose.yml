@@ -1,4 +1,4 @@
-name: pgsql
+name: postgres
 
 services:
   postgres:
